@@ -46,47 +46,7 @@ int main() {
     cout<<"2 - Customers operations"<<endl;
     cin>> firstDecision;
 
-    switch(firstDecision){
-        case 1:
-            cout<<"What do you want to do?"<<endl;
-            cout<<"1 - Add new car to database"<<endl;
-            cout<<"2 - Display all cars"<<endl;
-            cout<<"3 - Search car"<<endl;
-            cout<<"4 - Go back"<<endl;
-            cin>>secondDecision;
-            switch (secondDecision) {
-                default:
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-            }
-            break;
-        case 2:
-            cout<<"What do you want to do?"<<endl;
-            cout<<"1 - Add new car to database"<<endl;
-            cout<<"2 - Display all cars"<<endl;
-            cout<<"3 - Search car"<<endl;
-            cout<<"4 - Go back"<<endl;
-            cin>>secondDecision;
-            switch (secondDecision) {
-                default:
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-            }
-    }
+
 
 
     return 0;
