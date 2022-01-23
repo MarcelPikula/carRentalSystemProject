@@ -62,7 +62,10 @@ class vanCar : public Car{
 
 };
 
-
+std::ostream & operator <<( std::ostream & s, Car & car )
+{
+    return s << ' ' << car.getBrand() << ", " << car.getModel() << " production year: "<< car.getProductionYear();
+}
 
 
 #endif //CARRENTALSYSTEMPROJECT_CAR_H

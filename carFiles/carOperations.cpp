@@ -19,6 +19,12 @@ void changeCostPerDay(Car &car1){
     car1.setCostPerDay(newCost);
 }
 
+void carDetails(Car &car1){
+    cout<<"All details: "<<endl;
+    cout<<car1.getBrand()<<" "<<car1.getModel()<<" "<<car1.getProductionYear()<<" "<<car1.getColor()<<
+    " "<<car1.getPlates()<<" "<<car1.getEngineSize();
+}
+
 void changeAvailability(Car &car1){
 
     if(car1.getIsTaken()){
