@@ -67,25 +67,23 @@ int main() {
 
             switch(firstDecision){
                 case 1:
-
+                    cout<<"list of all cars: "<<endl;
                     for(auto i = begin(listOfCars); i != end(listOfCars); ++number, i++){
-                        cout<<"list of all cars: "<<endl;
                         cout<<number<<". "<<*i<<endl;
                     }
 
-                    cout<<"What do you want to do?"<<endl;
-                    cout<<"1 - Change color of car"<<endl;
-                    cout<<"2 - change cost of one day rent"<<endl;
-                    cout<<"3 - Show details about car"<<endl;
-                    cout<<"4 - Exit"<<endl;
-
-                    cin>>secondDecision;
-
                     for(int j=1; j>0; j++) {
+                        cout<<"What do you want to do?"<<endl;
+                        cout<<"1 - Change color of car"<<endl;
+                        cout<<"2 - change cost of one day rent"<<endl;
+                        cout<<"3 - Show details about car"<<endl;
+                        cout<<"4 - Exit"<<endl;
+
+                        cin>>secondDecision;
+
                         if (secondDecision == 4) {
                             break;
-                        } else {
-
+                        }
                             int carId = 0;
 
                             switch (secondDecision) {
@@ -107,7 +105,7 @@ int main() {
 
                             }
                         }
-                    }
+
                 case 2:
                     cout<<"What do you want to do?"<<endl;
                     cout<<"1 - Car operations"<<endl;
