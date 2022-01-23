@@ -13,12 +13,17 @@ class Car {
     string plates;
 
     int productionYear;
+    float engineSize;
     int costPerDay;
     bool isTaken;
 
+    friend class familyCar;
+    friend class sportCar;
+    friend class vanCar;
+
 public:
     explicit Car(string brand="not given", string model="not given", string color="not given",
-        string plates="not given", int productionYear=0, int costPerDay=0, bool isTaken=0);
+        string plates="not given", int productionYear=0, float enginzeSize=0 ,int costPerDay=0, bool isTaken=0);
 
     //SETTERS
     void setCostPerDay(int newCost);
@@ -31,9 +36,29 @@ public:
     string getColor();
     string getPlates();
     int getProductionYear();
+    float getEngineSize();
     int getCostPerDay();
     bool getIsTaken();
 
+
+};
+
+
+class familyCar : public Car{
+
+    int numberOfSeats;
+
+};
+
+class sportCar : public Car{
+
+    int horsepower;
+
+};
+
+class vanCar : public Car{
+
+    int trunkCapacity;
 
 };
 

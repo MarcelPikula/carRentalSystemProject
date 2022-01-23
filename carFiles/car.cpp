@@ -4,12 +4,13 @@
 using std::string;
 
 Car::Car(string brand, string model, string color, string plates,
-         int productionYear, int costPerDay, bool isTaken) {
+         int productionYear, float engineSize ,int costPerDay, bool isTaken) {
     this->brand = std::move(brand);
     this->model= std::move(model);
     this->color = std::move(color);
     this->plates = std::move(plates);
     this->productionYear = productionYear;
+    this->engineSize = engineSize;
     this->costPerDay = costPerDay;
     this->isTaken = isTaken;
 }
@@ -54,6 +55,10 @@ void Car::setIsTaken(bool flag) {
 
 bool Car::getIsTaken(){
     return this->isTaken;
+}
+
+float Car::getEngineSize() {
+    return this->engineSize;
 }
 
 
