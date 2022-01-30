@@ -69,15 +69,33 @@ int main() {
                 case 1:
                     cout<<"list of all cars: "<<endl;
                     for(auto i = begin(listOfCars); i != end(listOfCars); ++number, i++){
+
                         cout<<number<<". "<<*i<<endl;
                     }
 
+                    cout<<endl;
+
                     for(int j=1; j>0; j++) {
+                        cout<<"list of first 5 cars: "<<endl;
+                        number = 1;
+                        for(auto i = begin(listOfCars); i != end(listOfCars); ++number, i++){
+                            if(number<=5){
+                                cout<<number<<". "<<*i<<endl;
+                            }else{
+                                number = 1;
+                                break;
+
+                            }
+                        }
+                        cout<<endl;
                         cout<<"What do you want to do?"<<endl;
                         cout<<"1 - Change color of car"<<endl;
                         cout<<"2 - change cost of one day rent"<<endl;
                         cout<<"3 - Show details about car"<<endl;
                         cout<<"4 - Exit"<<endl;
+                        cout<<"5 - Add new car"<<endl;
+                        cout<<"6 - Show list of all cars"<<endl;
+
 
                         cin>>secondDecision;
 
@@ -102,6 +120,15 @@ int main() {
                                     cin>>carId;
                                     carDetails(listOfCars[carId]);
                                     break;
+                                case 5:
+                                    newCar(listOfCars);
+                                    break;
+                                case 6:
+                                    cout<<"list of all cars: "<<endl;
+                                    for(auto i = begin(listOfCars); i != end(listOfCars); ++number, i++){
+
+                                        cout<<number<<". "<<*i<<endl;
+                                    }
 
                             }
                         }

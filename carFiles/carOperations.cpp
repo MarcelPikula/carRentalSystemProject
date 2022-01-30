@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "car.h"
 
 using std::cout;
@@ -10,6 +11,38 @@ void changeColor(Car &car1){
     string newColor;
     cin>> newColor;
     car1.setColor(newColor);
+}
+
+void newCar(std::vector<Car> &Vector){
+    string marka, model, plates, color;
+    int productionYear, costPerDay;
+    float engineSize;
+    cout<<"Marka: ";
+    cin>>marka;
+
+    cout<<"model: ";
+    cin>>model;
+
+    cout<<"tablice: ";
+    cin>>plates;
+
+    cout<<"kolor: ";
+    cin>>color;
+
+    cout<<"rok produkcji: ";
+    cin>>productionYear;
+
+    cout<<"Koszt jednego dnia najmu: ";
+    cin>>costPerDay;
+
+    cout<<"Pojemnosc silnika: ";
+    cin>>engineSize;
+    cout<<endl;
+
+    Car newlyMadeCar(marka,model,color,plates,
+                     productionYear, engineSize, costPerDay,false);
+
+    Vector.push_back(newlyMadeCar);
 }
 
 void changeCostPerDay(Car &car1){

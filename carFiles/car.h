@@ -64,7 +64,7 @@ class vanCar : public Car{
 
 std::ostream & operator <<( std::ostream & s, Car & car )
 {
-    return s << ' ' << car.getBrand() << ", " << car.getModel() << " production year: "<< car.getProductionYear();
+    return s << ' ' << car.getBrand() << " " << car.getModel() << ". Production year: "<< car.getProductionYear();
 }
 
 

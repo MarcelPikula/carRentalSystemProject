@@ -19,6 +19,8 @@ string
 /Users/marcelpikula/CLionProjects/carRentalSystemProject/carFiles/carOperations.cpp
 iostream
 -
+vector
+-
 car.h
 /Users/marcelpikula/CLionProjects/carRentalSystemProject/carFiles/car.h
 
