@@ -92,14 +92,14 @@ int main() {
                         cout<<"1 - Change color of car"<<endl;
                         cout<<"2 - change cost of one day rent"<<endl;
                         cout<<"3 - Show details about car"<<endl;
-                        cout<<"4 - Exit"<<endl;
-                        cout<<"5 - Add new car"<<endl;
-                        cout<<"6 - Show list of all cars"<<endl;
+                        cout<<"4 - Add new car"<<endl;
+                        cout<<"5 - Show list of all cars"<<endl;
+                        cout<<"6 - Exit"<<endl;
 
 
                         cin>>secondDecision;
 
-                        if (secondDecision == 4) {
+                        if (secondDecision == 6) {
                             break;
                         }
                             int carId = 0;
@@ -120,10 +120,10 @@ int main() {
                                     cin>>carId;
                                     carDetails(listOfCars[carId]);
                                     break;
-                                case 5:
+                                case 4:
                                     newCar(listOfCars);
                                     break;
-                                case 6:
+                                case 5:
                                     cout<<"list of all cars: "<<endl;
                                     for(auto i = begin(listOfCars); i != end(listOfCars); ++number, i++){
 
