@@ -6,15 +6,20 @@
 #include "customerFiles/customer.cpp"
 #include "customerFiles/customerOperations.cpp"
 
+#include "userFunctions.cpp"
+
 
 using std::cout;
 using std::endl;
 using std::cin;
 
-int main() {
-    vector<Car> listOfCars;
+vector<Car> listOfCars;
 
-//    cout << "Hello, World!" << std::endl;
+bool stillWorkingFlag = true;
+bool firstOne = true;
+
+int main() {
+
     Car car1("Honda","Civic","Black","SD1923",
             2007,1.8, 12, false);
     Car car2("Honda","Accord","Black","SD1923",
@@ -50,104 +55,19 @@ int main() {
 //    cout<<endl;
 //    cout<<endl;
 
-    for(int i=1; i>0; i++){
 
-        int firstDecision = 0, secondDecision = 0;
-        cout<<"What do you want to do?"<<endl;
-        cout<<"1 - Car operations"<<endl;
-        cout<<"2 - Customers operations"<<endl;
-        cout<<"3 - Exit"<<endl;
-        cin>> firstDecision;
+    while(stillWorkingFlag){
 
-        if(firstDecision==3){
-            break;
-        }else{
-
-            int number=1;
-
-            switch(firstDecision){
-                case 1:
-                    cout<<"list of all cars: "<<endl;
-                    for(auto i = begin(listOfCars); i != end(listOfCars); ++number, i++){
-
-                        cout<<number<<". "<<*i<<endl;
-                    }
-
-                    cout<<endl;
-
-                    for(int j=1; j>0; j++) {
-                        cout<<"list of first 5 cars: "<<endl;
-                        number = 1;
-                        for(auto i = begin(listOfCars); i != end(listOfCars); ++number, i++){
-                            if(number<=5){
-                                cout<<number<<". "<<*i<<endl;
-                            }else{
-                                number = 1;
-                                break;
-
-                            }
-                        }
-                        cout<<endl;
-                        cout<<"What do you want to do?"<<endl;
-                        cout<<"1 - Change color of car"<<endl;
-                        cout<<"2 - change cost of one day rent"<<endl;
-                        cout<<"3 - Show details about car"<<endl;
-                        cout<<"4 - Add new car"<<endl;
-                        cout<<"5 - Show list of all cars"<<endl;
-                        cout<<"6 - Exit"<<endl;
-
-
-                        cin>>secondDecision;
-
-                        if (secondDecision == 6) {
-                            break;
-                        }
-                            int carId = 0;
-
-                            switch (secondDecision) {
-                                case 1:
-                                    cout<<"Which car?"<<endl;
-                                    cin>>carId;
-                                    changeColor(listOfCars[carId]);
-                                    break;
-                                case 2:
-                                    cout<<"Which car?"<<endl;
-                                    cin>>carId;
-                                    changeCostPerDay(listOfCars[carId]);
-                                    break;
-                                case 3:
-                                    cout<<"Which car?"<<endl;
-                                    cin>>carId;
-                                    carDetails(listOfCars[carId]);
-                                    break;
-                                case 4:
-                                    newCar(listOfCars);
-                                    break;
-                                case 5:
-                                    cout<<"list of all cars: "<<endl;
-                                    for(auto i = begin(listOfCars); i != end(listOfCars); ++number, i++){
-
-                                        cout<<number<<". "<<*i<<endl;
-                                    }
-
-                            }
-                        }
-
-                case 2:
-                    cout<<"What do you want to do?"<<endl;
-                    cout<<"1 - Car operations"<<endl;
-                    cout<<"2 - Customers operations"<<endl;
-                    cout<<"3 - Exit"<<endl;
-
-                    cin>>secondDecision;
-
-                    for(int j=1; j>0;j++){
-
-                    }
-                    break;
-            }
-
+        if(firstOne){
+            cout<<"Welcome to the car rental system app."<<endl;
+            listOfFunctionalities(greetingAndFirstDecision(), listOfCars, stillWorkingFlag);
+            firstOne = false;
         }
+
+        listOfFunctionalities(greetingAndFirstDecision(), listOfCars, stillWorkingFlag);
+
+
+
     }
     return 0;
 }
