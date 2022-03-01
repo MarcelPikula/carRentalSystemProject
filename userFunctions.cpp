@@ -1,5 +1,7 @@
 #include <iostream>
 
+enum decision {carOperations, customerOperations, exitOperation};
+
 void customerOperationsFunction();
 
 void carOperationsFunction(vector<struct Car> vector);
@@ -21,13 +23,13 @@ int greetingAndFirstDecision(){
 void listOfFunctionalities(int decision, vector<Car> listOfCars, bool &flag){
 
     switch(decision){
-        case 1:
+        case carOperations:
             carOperationsFunction(listOfCars);
             break;
-        case 2:
+        case customerOperations:
             customerOperationsFunction();
             break;
-        case 3:
+        case exitOperation:
             flag = false;
             break;
     }
